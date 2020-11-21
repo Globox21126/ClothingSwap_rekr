@@ -1,0 +1,36 @@
+.results {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("../../assets/assets/3-Columns-Background/3\ Columns\ Background@2x.png");
+    background-size: cover;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
+
+    div {
+        text-align: center;
+        width: 20.875em;
+        height: 15.750em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 90px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 28px;
+        }
+
+        p {
+            font-family: $font__Merriweather;
+            font-size: 15px;
+        }
+
+    }
+
+}

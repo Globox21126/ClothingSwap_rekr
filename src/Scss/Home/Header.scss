@@ -1,0 +1,136 @@
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .header__nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        
+            ul {
+                display: flex;
+                flex-direction: row;
+
+                button {
+                    cursor: pointer;
+                    margin: 2px;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    font-family: $font__OpenSans;
+                    color: $color__dark__gray;
+                    font-size: 14px;
+                    padding: 9px;
+                    display: flex;
+                    text-decoration: none;
+
+                    &:hover {
+                        outline: 1px solid $color__light__gray;
+                        scale: 1;
+                    }
+
+                    a {
+                        font-size: 18px;
+                        padding: 7px;
+                    }
+                }
+
+                .routing {
+                    text-decoration: inherit;
+
+                    &:hover {
+                        outline: 1px solid $color__yellow;
+                        scale: 1;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 270px;
+        text-align: center;
+
+        h2 {
+            font-size: 34px;
+            letter-spacing: -0.76px;
+        }
+
+        .header__decoration {
+            margin-top: 25px;
+            margin-bottom: 65px;
+        }
+
+        .header__details__buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 36px;
+            letter-spacing: 0px;
+
+            button {
+                display: flex;
+                flex-direction: column;
+                text-transform: uppercase;
+                border: 1px solid $color__light__gray;
+                width: 310px;
+                height: 120px;
+                outline: none;
+                background: none;
+                font-family: $font__OpenSans;
+                color: $color__dark__gray;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+    
+                &:active {
+                    outline: none;
+                }
+
+                &:first-child {
+                    margin-right: 44px;
+                }
+
+                span {
+                    font-size: 36px;
+                }
+            }
+
+        }
+    }
+
+    .header__image {
+        background-image: url("../../assets/assets/Home-Hero-Image.jpg");
+        height: 100vh;
+        width: 1000px;
+        background-position: 80%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: -150px;
+    }
+
+}

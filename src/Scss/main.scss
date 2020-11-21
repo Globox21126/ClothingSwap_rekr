@@ -1,0 +1,38 @@
+@import "./variables.scss";
+@import "./Home/Header.scss";
+@import "./Home/Results.scss";
+@import "./Home/Steps.scss";
+@import "./Home/AboutUs.scss";
+@import "./Home/WhoWeHelp.scss";
+@import "./Home/ContactUs.scss";
+@import "./Login/Login.scss";
+
+.wrapper {
+    margin-right: auto;
+    margin-left:  auto;
+    max-width: 1758px;
+    padding-right: 45px;
+    padding-left:  45px;
+}
+
+.decoration {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/assets/Decoration.svg");
+    height: 33px;
+    width: 253px;
+}
+
+a {
+    text-decoration: none;
+
+    &:active {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &:focus {
+        text-decoration: none;
+        color: inherit;
+    }
+}

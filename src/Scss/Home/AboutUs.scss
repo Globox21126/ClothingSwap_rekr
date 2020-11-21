@@ -1,0 +1,59 @@
+.about__us {
+    height: 935px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
+
+    .about__us__details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        background-color: $color__white;
+
+        h3 {
+            font-size: 38px;
+            margin-bottom: 32px;
+        }
+
+        span {
+            margin-bottom: 61px;
+        }
+
+        div {
+            font-size: 28px;
+            max-width: 550px;
+            height: 200px;
+            text-align: center;
+            letter-spacing: -0.6px;
+
+
+            p {
+                background-image: url("./../../assets/assets/Signature.svg");
+                height: 150px;
+                width: 209px;
+                background-repeat: no-repeat;
+                margin-top: 15px;
+                margin-left: 320px;
+            }
+        }
+
+
+
+    }
+
+    .about__us__photo {
+        background-image: url("./../../assets/assets/People.jpg");
+        height: 100%;
+        width: 50%;
+        background-repeat: no-repeat;
+        background-position: 30% 0%;
+        background-size: cover;
+        }
+    
+}

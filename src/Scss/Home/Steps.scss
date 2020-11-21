@@ -1,0 +1,132 @@
+.steps__intro {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
+
+    h1 {
+        font-size: 38px;
+        margin-bottom: 38px;
+    }
+}
+
+.steps__main {
+    height: 325px;
+    background-color: $color__white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
+
+    summary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 40px;
+
+        h3 {
+            font-size: 18px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        span {
+            width: 70px;
+            height: 1px;
+            background-color: $color__light__gray;
+            margin: 10.5px 0;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .steps__main__imgs {
+            height: 83px;
+            width: 83px;
+        }
+
+    }
+
+    summary:first-child {
+        div {
+            background-image: url("./../../assets/assets/Icon-1.svg");
+        }
+    }
+
+    summary:nth-child(2) {
+        div {
+            background-image: url("./../../assets/assets/Icon-2.svg");
+        }
+    }
+
+    summary:nth-child(3) {
+        div {
+            background-image: url("./../../assets/assets/Icon-3.svg");
+        }
+    }
+
+    summary:last-child {
+        div {
+            background-image: url("./../../assets/assets/Icon-4.svg");
+        }
+    }
+
+}
+
+.steps__outro {
+    height: 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            border: 1px solid $color__light__gray;
+            width: 310px;
+            height: 120px;
+            outline: none;
+            background: none;
+            font-family: $font__OpenSans;
+            color: $color__dark__gray;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:active {
+                outline: none;
+            }
+
+            &:first-child {
+                margin-right: 44px;
+            }
+
+            span {
+                font-size: 36px;
+            }
+        }
+    }
+
+}
