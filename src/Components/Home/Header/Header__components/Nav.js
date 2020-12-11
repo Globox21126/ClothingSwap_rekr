@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react'
 import {Link} from 'react-scroll'
 import {Link as RouterPath} from "react-router-dom";
 import {fire} from "../../../../config";
+import {useAppState, useAppDispatch} from '../../../../app-context';
 
-function Nav({authListener}) {
+function Nav() {
 
-    // const [currentUser, setCurrentUser] = useState("");
+    const appState = useAppState();
+
+    const dispatch = useAppDispatch();
 
     // useEffect(() => {
     //     authListener();
@@ -18,18 +21,38 @@ function Nav({authListener}) {
     // //     setActualUser(fire.auth().currentUser.email);
     // // }
 
+    const logout = () => {
+        dispatch({ type: 'logout' });
+    }
 
     return (
         <section>
             <nav className="header__nav">
                 <ul className="header__login">
-                    {/* <div>{currentUser}</div>  */}
-                    <RouterPath to="/Login">
+                    {appState.user.isLogged ? 
+                    <>
+                        <li>{appState.user.login}</li> 
+                        <RouterPath to="/Profile">
+                            <button>Profil</button>
+                        </RouterPath>
+                        <button onClick={logout}>Wyloguj</button>
+                    </>
+                    : 
+                    <>
+                        <RouterPath to="/Login">
+                            <button className="routing">Zaloguj</button>
+                        </RouterPath>
+                        <RouterPath to="/Register">
+                            <button className="routing">Załóż konto</button>
+                        </RouterPath>
+                    </>
+                    }
+                    {/* <RouterPath to="/Login">
                         <button className="routing">Zaloguj</button>
                     </RouterPath>
                     <RouterPath to="/Register">
                         <button className="routing">Załóż konto</button>
-                    </RouterPath>
+                    </RouterPath> */}
                 </ul>
                 <ul className="header__menu">
                     <button>
