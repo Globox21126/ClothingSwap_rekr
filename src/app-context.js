@@ -19,10 +19,13 @@ const initState = {
 function appStateReducer(state, action) {
     switch (action.type) {
         case 'login': {
-            return { ...state, user: { isLogged: true, login: action.login, password: action.password, id: action.id, name: action.name, surname: action.surname, city: action.city } }
+            return { ...state, user: { isLogged: true, login: action.login, password: action.password, id: action.id, name: action.name, surname: action.surname, city: action.city }}
         }
         case 'logout': {
             return { ...state, user: { isLogged: false, login: null } }
+        }
+        case 'change': {
+            return { ...state, user: {isLogged: true, login: action.login, password: action.password, id: action.id, name: action.name, surname: action.surname, city: action.city }}
         }
     }
 }
