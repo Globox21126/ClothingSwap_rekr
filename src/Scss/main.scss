@@ -6,6 +6,8 @@
 @import "./Home/WhoWeHelp.scss";
 @import "./Home/ContactUs.scss";
 @import "./Login/Login.scss";
+@import "./Home/Profile.scss";
+@import "./Home/Form.scss";
 
 .wrapper {
     margin-right: auto;
@@ -37,17 +39,3 @@ a {
     }
 }
 
-//user profile
-
-.user__profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .user__data {
-        height: 150px;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}

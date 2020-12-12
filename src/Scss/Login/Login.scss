@@ -56,8 +56,21 @@
                     }
                 }
             }
+            
+            .register__submit {
+                height: 25px;
+                background: none;
+                outline: none;
+                border: 1px solid #737373;
+                font-family: "Open Sans", sans-serif;
+                font-weight: bold;
 
-
+                &:hover {
+                    cursor: pointer;
+                    background-color: #737373;
+                    transition: 1s;
+                }
+            }
         }
         
         .login__buttons {

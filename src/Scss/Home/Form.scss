@@ -1,0 +1,136 @@
+// .user__profile {
+//     height: 370px;
+
+//     .user__data {
+//         height: 85%;
+//         padding: 10px 0;
+//     }
+
+//     .form {
+//         font-family: $font__OpenSans;
+//         background-color: $color__white;
+//         padding: 10px 60px;
+//         height: 85%;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+    
+//         h1 {
+//             margin-bottom: 10px;
+//             font-weight: 600;
+//             font-size: 1.2em;
+//         }
+    
+//         div {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+    
+//             label {
+//                 margin-right: 5px;
+//             }
+    
+//             input {
+//                 margin: 5px;
+//             }
+//         }
+    
+//         .submit__input__form {
+//             height: 25px;
+//             width: 60px;
+//             background: none;
+//             outline: none;
+//             border: 1px solid #737373;
+//             font-family: "Open Sans", sans-serif;
+//             font-weight: bold;
+//         }
+//     }
+// }
+
+
+.profile__box {
+    width: 384px;
+    height: 400px;
+    background-color: $color__white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        max-width: 250px;
+
+        label {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .login__input {
+            border: none;
+            border-bottom: 1px solid $color__light__gray;
+            width: 100%;
+            margin-bottom: 15px;
+            background-color: $color__white;
+
+            &:focus {
+                border: none;
+                border-bottom: 1px solid $color__light__gray;
+                outline: none;
+            }
+
+            &:active {
+                border: none;
+                border-bottom: 1px solid $color__light__gray;
+                outline: none;
+            }
+        }
+    }
+
+
+}
+
+.login__box {
+    width: 384px;
+    height: 235px;
+    background-color: $color__white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        max-width: 250px;
+
+        label {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .login__input {
+            border: none;
+            border-bottom: 1px solid $color__light__gray;
+            width: 100%;
+            margin-bottom: 15px;
+            background-color: $color__white;
+
+            &:focus {
+                border: none;
+                border-bottom: 1px solid $color__light__gray;
+                outline: none;
+            }
+
+            &:active {
+                border: none;
+                border-bottom: 1px solid $color__light__gray;
+                outline: none;
+            }
+        }
+    }
+
+
+}
+

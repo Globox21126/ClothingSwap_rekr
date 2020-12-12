@@ -13,12 +13,12 @@ function Profile() {
             <div className="user__profile">
                 <Form />
                 <section className="user__data">
-                    <div>{appState.user.id}</div>
-                    <div>{appState.user.login}</div>
-                    <div>{appState.user.password}</div>
-                    <div>{appState.user.name}</div>
-                    <div>{appState.user.surname}</div>
-                    <div>{appState.user.city}</div>
+                    <div>Twoje ID: {appState.user.id}</div>
+                    <div>Twój login: {appState.user.login}</div>
+                    <div>Twoje hasło: {appState.user.password}</div>
+                    <div>Imię: {appState.user.name}</div>
+                    <div>Nazwisko: {appState.user.surname}</div>
+                    <div>Miasto: {appState.user.city}</div>
                 </section>
             </div>
         </>

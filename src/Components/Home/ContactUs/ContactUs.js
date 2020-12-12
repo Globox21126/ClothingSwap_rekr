@@ -75,7 +75,7 @@ function ContactUs() {
                 </div> */}
             </form>
             <div className="form__background">
-                <h3>Copyright by Coders Lab</h3>
+                <h3></h3>
             </div>
         </section>
     )

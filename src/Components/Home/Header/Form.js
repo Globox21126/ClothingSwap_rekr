@@ -16,47 +16,49 @@ function Form() {
 
     const dataChange = (e) => {
         e.preventDefault();
-        console.log(appState.user);
-        console.log(Users);
         dispatch({ type: 'change', login: login, password: password, id: id, name: name, surname: surname, city: city });
-        // appState.user.push({ 
-        //     id: id,
-        //     login: login,
-        //     password: password,
-        //     name: name,
-        //     surname: surname,
-        //     city: city
-        // })
+        const userToUpdate = Users[appState.user.id - 1]
+        userToUpdate.login =  login;
+        userToUpdate.password =  password;
+        userToUpdate.name =  name;
+        userToUpdate.surname =  surname;
+        userToUpdate.city =  city;
     }
 
     return (
-        <form onSubmit={e => dataChange(e)} className="form">
-            <div>
-                <label>ID</label>
-                <input name="id" onChange={(e) => {setId(e.target.value);}} />
+        <section className="login__form">
+            <h1>User Profile</h1>
+            <div className="decoration form__deco"></div>
+            <div className="profile__box">
+            <form onSubmit={e => dataChange(e)} className="form">
+                <div>
+                    <label>ID</label>
+                    <input className="login__input" value={appState.user.id} name="id" placeholder={appState.user.id} onChange={(e) => {setId(e.target.value);}} />
+                </div>
+                <div>
+                    <label>Login</label>
+                    <input className="login__input" name="login" placeholder={appState.user.login} onChange={(e) => {setLogin(e.target.value);}} />
+                </div>
+                <div>
+                    <label>Imię</label>
+                    <input className="login__input" name="name" placeholder={appState.user.name} onChange={(e) => {setName(e.target.value);}} />
+                </div>
+                <div>
+                    <label>Nazwisko</label>
+                    <input className="login__input" name="surname" placeholder={appState.user.surname} onChange={(e) => {setSurname(e.target.value);}} />
+                </div>
+                <div>
+                    <label>Miasto</label>
+                    <input className="login__input" name="city" placeholder={appState.user.city} onChange={(e) => {setCity(e.target.value);}} />
+                </div>
+                <div>
+                    <label>Hasło</label>
+                    <input className="login__input" name="password" placeholder={appState.user.password} onChange={(e) => {setPassword(e.target.value);}} />
+                </div>
+                <input type="submit" value="Zapisz"/>
+            </form>
             </div>
-            <div>
-                <label>Login</label>
-                <input name="login" onChange={(e) => {setLogin(e.target.value);}} />
-            </div>
-            <div>
-                <label>Imię</label>
-                <input name="name" onChange={(e) => {setName(e.target.value);}} />
-            </div>
-            <div>
-                <label>Nazwisko</label>
-                <input name="surname" onChange={(e) => {setSurname(e.target.value);}} />
-            </div>
-            <div>
-                <label>Miasto</label>
-                <input name="city" onChange={(e) => {setCity(e.target.value);}} />
-            </div>
-            <div>
-                <label>Hasło</label>
-                <input name="password" onChange={(e) => {setPassword(e.target.value);}} />
-            </div>
-            <input type="submit" value="Zapisz"/>
-        </form>
+        </section>
     )
 }
 
